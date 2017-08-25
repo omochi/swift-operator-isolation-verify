@@ -1,3 +1,5 @@
-# swift-operator-isolation-verify
+use swift 4
 
-A description of this package.
+```
+$ swift run
+```
