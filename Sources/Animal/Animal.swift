@@ -3,10 +3,11 @@ infix operator => : SwifletPrecedence
 precedencegroup SwifletPrecedence {
     associativity: left
     higherThan: TernaryPrecedence
+    lowerThan: LogicalDisjunctionPrecedence
 }
 
-public func =><T, U>(lhs: T, rhs: (T) throws -> U) rethrows -> U {
-    return try rhs(lhs)
+public func =>(_ a: Int, _ b: Int) -> Int {
+	return a * b
 }
 
 prefix operator =>

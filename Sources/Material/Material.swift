@@ -2,11 +2,12 @@ infix operator => : SwifletPrecedence
 
 precedencegroup SwifletPrecedence {
     associativity: left
-    higherThan: TernaryPrecedence
+    higherThan: AdditionPrecedence
+    lowerThan: MultiplicationPrecedence
 }
 
 public func =>(_ a: Int, _ b: Int) -> Int {
-	return a + b
+	return a * b
 }
 
 prefix operator =>
